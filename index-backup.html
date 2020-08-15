@@ -14,16 +14,16 @@
    <div class="row hide-on-large-only"> 
     <ul class="collapsible">
       <li>
-        <div class="collapsible-header red"><i class="material-icons">device_hub</i>Movie Hub</div>
+        <div class="collapsible-header red white-text"><i class="material-icons white-text">device_hub</i>Movie Hub: Expand Your Movie Horizons <br> Click Here to search for your film.</div>
         <div class="collapsible-body">
           <form>
             <div class="input-field grey lighten-3">                       
-              <input id="search-cola" type="search" required>
-                <label class="label-icon" for="search"><i  class="material-icons ">search</i></label>
+              <input id="search-cola" placeholder="Search your Movie Titles" type="search" required>
+                
                  <i class="material-icons">close</i>
               </div>
             </form>
-            <button class="waves-effect waves-light btn">Search</button> 
+            <button id="primary-search-btn" class="waves-effect waves-light btn">Search</button> 
         </div>
       </li>
     </ul>
@@ -34,7 +34,7 @@
           <div class="red">
             <a href="#!" class="brand-logo col s4 hide-on-small-only"> <i class="large material-icons">device_hub</i>Movie Hub</a>
           </div>
-          <ul id="nav-mobile" class="brand-logo col s4 offset-s5 right">
+          <ul id="nav-mobile" class="brand-logo col s4 offset-s4 right">
             <li><h5>Expand Your Movie Horizons</h5></li>
           </ul> 
       </nav>
@@ -44,14 +44,13 @@
         <div class="col s6">
           <form>
           <div class="input-field grey lighten-3">                       
-            <input id="search" type="search" required>
-              <label class="label-icon" for="search"><i  class="material-icons ">search</i></label>
+            <input id="search" placeholder="Search your Movie Titles" type="search" required>
                <i class="material-icons">close</i>
             </div>
           </form>
         </div>
         <br>
-        <button class="waves-effect waves-light btn">Search</button>
+        <button id="primary-search-btn" class="waves-effect waves-light btn">Search</button>
       </div> 
              <!--Hide this Row on Search  -->
       <div class="row">
@@ -81,11 +80,19 @@
                 <div class="card-content">
                   <p>Movies Details Actors and Genre placement</p>
                   <p></p>
+                  <h5>Director</h5>	                   
                     <label>
-                      <input class="with-gap" name="group1" type="radio" checked/>
-                      <span>Actors</span>
+                    <div id="director-name"></div>	                      
+                    <input class="with-gap" name="group1" type="radio" checked/>
                     </label>
-                  </p>
+                    <h5>Actors</h5> 	                     
+                    <span>Actors</span>
+                    <p>	
+                      <label>	
+                        <input id="radio-btn${i}" class="with-gap" name="group1" type="radio" checked/>	
+                        <span id="actor{i}">Actors</span>
+                      </label>
+                    </p>
                 </div>
               </div>
             </div>
@@ -104,6 +111,7 @@
       <div class="card">
         <div class="card-content">
           <span>Select One For Recommendations</span>
+          <!-- Input for search criteria -->
           <form id="my_radio_box"  action="#">
             <p>
               <label>
